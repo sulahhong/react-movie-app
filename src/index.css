@@ -1,0 +1,47 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    color: white;
+    padding: 8px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    color: white;
+}
+
+.navbar-menu li {
+    padding: 8px 12px;
+}
+
+.navbar-icons {
+    list-style: none;
+    color: white;
+    display: flex;
+}
+
+.navbar-icons li {
+    padding: 8px 12px;
+}

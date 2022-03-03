@@ -4,6 +4,7 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
+    
     const [movies, setMovies] = useState([]);
     const [rating, setRating] = useState();
     

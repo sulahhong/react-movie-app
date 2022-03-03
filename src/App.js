@@ -3,11 +3,12 @@ import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 import Navbar from "./components/Navbar";
 
+
 function App() {
    return (
       <Router>
       <Switch>
-         {/* <Navbar /> */}
+         <Navbar />
       <Route path="/movie/:id"> 
          <Detail/>
          </Route>
