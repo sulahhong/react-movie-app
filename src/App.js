@@ -8,11 +8,11 @@ function App() {
    return (
       <Router>
       <Switch>
-         <Navbar />
       <Route path="/movie/:id"> 
          <Detail/>
          </Route>
          <Route path="/" >
+         <Navbar />
          <Home/>
          </Route>
       </Switch>

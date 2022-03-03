@@ -24,9 +24,9 @@ const Navbar = () => {
                 <li><i><FaFacebook /></i></li>
                 <li><i><FaTwitter /></i></li>
             </ul> 
-            <a className='navbar-toggleBtn'>
+            {/* <a className='navbar-toggleBtn'>
                 <i><FaBars /></i>
-            </a>
+            </a> */}
             
         </nav>
 
