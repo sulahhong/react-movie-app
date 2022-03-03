@@ -1,7 +1,13 @@
-import {FaFacebook, FaTwitter} from 'react-icons/fa'
+import { useState } from 'react'
+import {FaFacebook, FaTwitter, FaBars} from 'react-icons/fa'
 import {ImVideoCamera} from "react-icons/im"
 
 const Navbar = () => {
+    // const [showNav, setShowNav] = useState();
+    const navtoggle= () => {
+        {}
+    }
+
     return (
         <nav className='navbar'>
             <div className='navbar-logo'>
@@ -9,14 +15,19 @@ const Navbar = () => {
                 <a href=""> Home box</a>
             </div>
             <ul className='navbar-menu'>                
-                <li>Home</li>
-                <li>about</li>
-                <li>My list</li>
+                <li><a href="">Home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">My list</a></li>
+                <li><a href="">FAQ</a></li>
             </ul>       
             <ul className='navbar-icons'>
                 <li><i><FaFacebook /></i></li>
                 <li><i><FaTwitter /></i></li>
-            </ul>     
+            </ul> 
+            <a className='navbar-toggleBtn'>
+                <i><FaBars /></i>
+            </a>
+            
         </nav>
 
     )
