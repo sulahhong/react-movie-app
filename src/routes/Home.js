@@ -15,7 +15,7 @@ function Home() {
        ) : (
             <div className="search-bar">
             <div>
-             <h1>search here</h1> 
+             <h2>search here</h2> 
              <input
             value={rating}
             id="rating"
