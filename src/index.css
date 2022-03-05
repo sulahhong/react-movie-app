@@ -25,6 +25,7 @@ a {
     font-size: 24px;
     color: #53c2db;
     padding: 8px;
+    font-weight: bold;
 }
 
 .navbar-menu {
@@ -32,6 +33,7 @@ a {
     list-style: none;
     padding-left: 0;
     color: #53c2db;
+    font-weight: bold;
 }
 /* changed */
 .navbar-menu a {
@@ -95,3 +97,21 @@ a {
 }
 
 /* home css */
+.boxes .container {
+    display: flex;
+    justify-content: space-between;
+    }
+  
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    padding: 15px 20px;
+    margin: 20px 10px;
+    flex-wrap: wrap;
+  }
+.search-bar {
+    color: white;
+    
+}  
