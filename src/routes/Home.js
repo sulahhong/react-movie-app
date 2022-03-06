@@ -45,12 +45,12 @@ function Home() {
                   </div>
                 </div>
               </section>
-            </div>
-        )}
           <div className="footerBtn">
             <button onClick={prevPage}>prev</button>
             <button onClick={nextPage}>next</button>
           </div>
+            </div>
+            )}
     </div>
     );
     }
