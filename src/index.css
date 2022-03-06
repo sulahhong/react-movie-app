@@ -131,4 +131,12 @@ a {
     display: flex;
     justify-content: center;
 
-}  
+}
+
+.footerBtn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 10px 10px ;
+}

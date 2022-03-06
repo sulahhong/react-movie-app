@@ -24,9 +24,7 @@ function Home() {
             onChange={onChange}
             />
             </div>
-            {/* <div className="search-bar">
-              <input type="search" />
-            </div> */}
+            
             <section className="boxes">
               <div className="container">
                 <div className="box">
@@ -48,8 +46,10 @@ function Home() {
               </section>
             </div>
         )}
-        <button onClick={prevPage}>prev</button>
-        <button onClick={nextPage}>next</button>
+          <div className="footerBtn">
+            <button onClick={prevPage}>prev</button>
+            <button onClick={nextPage}>next</button>
+          </div>
     </div>
     );
     }
