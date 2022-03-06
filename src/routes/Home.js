@@ -24,6 +24,9 @@ function Home() {
             onChange={onChange}
             />
             </div>
+            {/* <div className="search-bar">
+              <input type="search" />
+            </div> */}
             <section className="boxes">
               <div className="container">
                 <div className="box">
