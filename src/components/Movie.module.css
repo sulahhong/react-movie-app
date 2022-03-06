@@ -1,0 +1,23 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #263343;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+
+.title {
+    word-break: keep-all;
+    word-wrap: break-word;
+    color: white;
+}
+
+.bbox {
+    width: 250px;
+    height: 529px;
+}

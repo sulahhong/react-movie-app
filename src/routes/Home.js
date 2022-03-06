@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import { useGlobalContext } from "../components/context";
-import style from './Home.module.css';
+import styles from './Home.module.css';
 
 
 function Home() {
-  const {loading, movies, rating, onChange } = useGlobalContext()
+  const {loading, movies, rating, onChange, prevPage, nextPage } = useGlobalContext()
 
     return (
       
@@ -13,8 +13,8 @@ function Home() {
       {loading ? (
           <h1>Loading...</h1>
        ) : (
-            <div className="search-bar">
             <div>
+            <div className="search-bar">
              <h2>search here</h2> 
              <input
             value={rating}
@@ -36,6 +36,8 @@ function Home() {
                       // summary={movie.summary}
                       genres={movie.genres}
                       movie={movie}
+                      rating={movie.rating}
+                      runtime={movie.runtime}
                     />
                     ))}
                   </div>
@@ -43,6 +45,8 @@ function Home() {
               </section>
             </div>
         )}
+        <button onClick={prevPage}>prev</button>
+        <button onClick={nextPage}>next</button>
     </div>
     );
     }

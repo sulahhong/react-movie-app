@@ -8,6 +8,12 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+body {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -97,9 +103,16 @@ a {
 }
 
 /* home css */
+.boxes {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .boxes .container {
     display: flex;
     justify-content: space-between;
+
     }
   
   .box {
@@ -113,5 +126,7 @@ a {
   }
 .search-bar {
     color: white;
+    margin: 20px 50px;
+    padding: 20px 50px;
     
 }  

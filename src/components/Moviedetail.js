@@ -3,8 +3,12 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 
-function Movie({ id, coverImg, rating, runtime, description_full, title, summary, genres, movie}) {
-  return (
+function Moviedetail(
+  {id, coverImg, rating, runtime, description_full, title, summary, genres, language, yt, mpa_rating, movie}) {
+  
+  console.log(yt)
+
+    return (
       <div>
         <img src={coverImg} alt={title} />
         <h2>
@@ -25,13 +29,22 @@ function Movie({ id, coverImg, rating, runtime, description_full, title, summary
         <div>
           <b>{genres && `<genres>`}</b>
           {movie.hasOwnProperty("genres") ? (<ul>{genres.map((g)=>(<li key={g}>{g}</li>))}</ul>) : null}
+        <div>
+          <p>{language && `language: ${language}`}</p>
+        </div>
+        <div>
+          <p>{mpa_rating && `mpa rating: ${mpa_rating}`}</p>
+        </div>
+        <div>
+          <a href={`https://www.youtube.com/watch?v=${yt}`}>watch movie trailer</a>
+        </div>
         </div>
         <Link to={"/"}>BACK</Link>
       </div>
     );
     }
 
-Movie.propTypes = {
+Moviedetail.propTypes = {
     id:PropTypes.number.isRequired,
     coverImg: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -39,4 +52,4 @@ Movie.propTypes = {
     genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default Movie;
+export default Moviedetail;

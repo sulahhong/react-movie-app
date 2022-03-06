@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Movie from "../components/Moviedetail";
+import Moviedetail from "../components/Moviedetail";
 // import Home from "../routes/Home";
 
 function Detail() {
@@ -20,6 +20,8 @@ function Detail() {
        setLoading(false);
     }, []);
 
+    console.log(movie)
+
     return (
       <div>
        {
@@ -28,7 +30,7 @@ function Detail() {
           :
           <div>
             {
-              <Movie 
+              <Moviedetail
                key={movie.id}
                id={movie.id}
                coverImg={movie.medium_cover_image}
@@ -37,7 +39,10 @@ function Detail() {
                description_full={movie.description_full}
                title={movie.title}
                genres={movie.genres}
-               movie={movie} />
+               movie={movie}
+               language={movie.language}
+               mpa_rating={movie.mpa_rating} 
+               yt={movie.yt_trailer_code}/>
             }
             
           </div>
