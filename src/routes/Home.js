@@ -17,11 +17,12 @@ function Home() {
             <div className="search-bar">
              <h2>search here</h2> 
              <input
-            value={rating}
-            id="rating"
-            placeholder="Rating"
-            type="number"
-            onChange={onChange}
+                className="search-bar"
+                value={rating}
+                id="rating"
+                placeholder="Rating"
+                type="number"
+                onChange={onChange}
             />
             </div>
             
