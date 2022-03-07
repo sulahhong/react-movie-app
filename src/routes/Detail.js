@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Moviedetail from "../components/Moviedetail";
+import Navbar from "../components/Navbar";
 // import Home from "../routes/Home";
 
 function Detail() {
@@ -29,7 +30,7 @@ function Detail() {
           ? <h1>Loading...</h1>
           :
           <div>
-            {
+            { 
               <Moviedetail
                key={movie.id}
                id={movie.id}

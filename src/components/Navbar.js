@@ -15,10 +15,10 @@ const Navbar = () => {
                 <a href=""> Home box</a>
             </div>
             <ul className='navbar-menu'>                
-                <li><a href="">Home</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">My list</a></li>
-                <li><a href="">FAQ</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">My list</a></li>
+                <li><a href="#">FAQ</a></li>
             </ul>       
             <ul className='navbar-icons'>
                 <li><i><FaFacebook /></i></li>

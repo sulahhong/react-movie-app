@@ -9,6 +9,7 @@ function App() {
       <Router>
       <Switch>
       <Route path="/movie/:id"> 
+         <Navbar />
          <Detail/>
          </Route>
          <Route path="/" >
