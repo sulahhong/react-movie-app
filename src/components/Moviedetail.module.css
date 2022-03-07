@@ -1,0 +1,22 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #263343;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+.container {
+    margin: 30px 20px;
+    display: flex;
+}
+
+.mainbox {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
