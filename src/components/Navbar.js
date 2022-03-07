@@ -12,7 +12,7 @@ const Navbar = () => {
         <nav className='navbar'>
             <div className='navbar-logo'>
                 <i><ImVideoCamera /></i>
-                <a href=""> Home box</a>
+                <a href="/"> Home box</a>
             </div>
             <ul className='navbar-menu'>                
                 <li><a href="#">Home</a></li>

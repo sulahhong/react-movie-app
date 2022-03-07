@@ -35,7 +35,7 @@ function Moviedetail(
         <div className={styles.mainbox}>
           <b>{genres && `<genres>`}</b>
           {movie.hasOwnProperty("genres") ? (<ul>{genres.map((g)=>(<li key={g}>{g}</li>))}</ul>) : null}
-        <div>
+        <div className={styles.mainbox}>
           <p>{language && `language: ${language}`}</p>
           <p>{mpa_rating && `mpa rating: ${mpa_rating}`}</p>
         </div>
