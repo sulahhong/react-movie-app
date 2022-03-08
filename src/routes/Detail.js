@@ -32,19 +32,19 @@ function Detail() {
           <div>
             { 
               <Moviedetail
-               key={movie.id}
-               id={movie.id}
-               coverImg={movie.medium_cover_image}
-               rating={movie.rating}
-               runtime={movie.runtime}
-               description_full={movie.description_full}
-               title={movie.title}
-               genres={movie.genres}
-               movie={movie}
-               language={movie.language}
-               mpa_rating={movie.mpa_rating} 
-               yt={movie.yt_trailer_code}/>
-            }
+                key={movie.id}
+                id={movie.id}
+                coverImg={movie.medium_cover_image}
+                rating={movie.rating}
+                runtime={movie.runtime}
+                summary={movie.summary}
+                title={movie.title}
+                genres={movie.genres}
+                movie={movie}
+                language={movie.language}
+                mpa_rating={movie.mpa_rating} 
+                yt={movie.yt_trailer_code}/>
+              }
             
           </div>
         } 

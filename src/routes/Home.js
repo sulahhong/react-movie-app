@@ -14,7 +14,7 @@ function Home() {
           <h1>Loading...</h1>
        ) : (
             <div>
-            <div className="search-bar">
+            {/* <div className="search-bar">
              <h2>search here</h2> 
              <input
                 className="search-bar"
@@ -24,7 +24,7 @@ function Home() {
                 type="number"
                 onChange={onChange}
             />
-            </div>
+            </div> */}
             
             <section className="boxes">
               <div className="container">
@@ -34,7 +34,7 @@ function Home() {
                       key={movie.id}
                       id={movie.id}
                       coverImg={movie.medium_cover_image} 
-                      title={movie.title_long} 
+                      title={movie.title} 
                       // summary={movie.summary}
                       genres={movie.genres}
                       movie={movie}

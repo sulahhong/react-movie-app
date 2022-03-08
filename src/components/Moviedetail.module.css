@@ -11,7 +11,7 @@
 
 
 .container {
-    margin: 100px 20px;
+    margin: 150px 20px;
     display: flex;
 }
 
@@ -21,6 +21,6 @@
     margin: 10px 20px;
 }
 
-.mainimg {
-
+.maindetail {
+    margin: 0px;
 }

@@ -27,43 +27,37 @@ a {
     top: 0;
     width: 1310px;
     background-color:  #263343;
-    padding: 10px 10px;
+    padding: 20px 10px;
 }
 
 .navbar-logo {
-    font-size: 24px;
+    font-size: 30px;
     color: #53c2db;
     padding: 8px;
     font-weight: bold;
 }
 
+
 .navbar-menu {
     display: flex;
     list-style: none;
     padding-left: 0;
-    color: #53c2db;
+    color: #2ebbdb;
     font-weight: bold;
+    font-size: 20px;
+
 }
 /* changed */
 .navbar-menu a {
-    padding: 20px 25px;
+    padding: 20px 20px;
+    fill: none;
 }
 
 .navbar-menu a:hover {
-    background-color: #53c2db;
+    background-color: #53c4dd;
     border-radius: 4px;
 }
 
-.navbar-icons {
-    list-style: none;
-    color: white;
-    display: flex;
-    padding: 0%;
-}
-
-.navbar-icons li {
-    padding: 8px 12px;
-}
 
 /* .navbar-toggleBtn {
     display: none;
@@ -78,7 +72,7 @@ a {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 8px 24px;
+        padding: 0px 24px;
     }
 
     .navbar-menu {
@@ -93,11 +87,6 @@ a {
         text-align: center;
     }
 
-    .navbar-icons {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
 
     /* .navbar-toggleBtn {
         display: block;
@@ -107,15 +96,18 @@ a {
 
 /* home css */
 .boxes {
-    max-width: 1310px;
+    max-width: 1320px;
     max-height: 2500px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .boxes .container {
+    padding-top: 30%;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     }
   
   .box {

@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 
 function Moviedetail(
-  {id, coverImg, rating, runtime, description_full, title, summary, genres, language, yt, mpa_rating, movie}) {
+  {id, coverImg, rating, runtime, title, summary, genres, language, yt, mpa_rating, movie}) {
   
   console.log(yt)
 
@@ -27,10 +27,6 @@ function Moviedetail(
         <div className={styles.mainbox}>
         <b>{summary && `<summary>`}</b>
         <p>{summary}</p>
-        </div>
-        <div className={styles.mainbox}>
-          <b>{description_full && `<description>`}</b>
-          <p>{description_full}</p>
         </div>
         <div className={styles.mainbox}>
           <b>{genres && `<genres>`}</b>
