@@ -41,6 +41,7 @@ function Detail() {
                 title={movie.title}
                 genres={movie.genres}
                 movie={movie}
+                description_full={movie.description_full}
                 language={movie.language}
                 mpa_rating={movie.mpa_rating} 
                 yt={movie.yt_trailer_code}/>
