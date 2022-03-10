@@ -14,17 +14,18 @@ function Home() {
           <h1>Loading...</h1>
        ) : (
             <div>
-            {/* <div className="search-bar">
+             <div className="search-bar"> 
              <h2>search here</h2> 
              <input
-                className="search-bar"
+                
                 value={rating}
                 id="rating"
                 placeholder="Rating"
                 type="number"
                 onChange={onChange}
             />
-            </div> */}
+            </div> 
+           
             
             <section className="boxes">
               <div className="container">
