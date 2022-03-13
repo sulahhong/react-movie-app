@@ -7,28 +7,14 @@ function Movie({ id, coverImg, rating, runtime, description_full, title, summary
   return (
       <div className={styles.bbox}>
         <img src={coverImg} alt={title} />
-        <h2 >
-          <Link to={`/movie/${id}`} className={styles.title}>{title}</Link>
-        </h2>
-        <div>
+        <div className={styles.homeinfo}>
+          <h2 >
+            <Link to={`/movie/${id}`} className={styles.title}>{title}</Link>
+          </h2>
           <p>{rating && `rating: ${rating}`}</p>
           <p>{runtime && `runtime: ${runtime} (min)`}</p>
-        </div>
-        <div>
-        <b>{summary && `summary`}</b>
-        <p>{summary}</p>
-        </div>
-        
-        <div>
-          <b>{description_full && `description`}</b>
-          <p>{description_full}</p>
-        </div>
-        <div>
-          <b>{genres && `genres`}</b>
-          {movie.hasOwnProperty("genres") ? (<ul>{genres.map((g)=>(<li key={g}>{g}</li>))}</ul>) : null}
-        </div>
-        <div>
-
+          <p><b>{genres && `genres`}</b></p>
+            {movie.hasOwnProperty("genres") ? (<ul>{genres.map((g)=>(<li key={g}>{g}</li>))}</ul>) : null}
         </div>
       </div>
     );

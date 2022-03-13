@@ -21,58 +21,38 @@ function Moviedetail({
 
   return (
     <div className={styles.container}>
-      <div className={styles.mainimg}>
-        <img src={coverImg} alt={title} />
-      </div>
-      <div className={styles.mainbox}>
-        <h2 className={styles.maindetail}>
-          <Link to={`/movie/${id}`}>{title}</Link>
-        </h2>
-        <div className={styles.mainbox}>
-          <p>{rating && `rating: ${rating}`}</p>
-          <p>{runtime && `runtime: ${runtime} (min)`}</p>
-          <p>{language && `language: ${language}`}</p>
-        </div>
-        <div className={styles.mainbox}>
-          <b>{summary && `<summary>`}</b>
-          <p>{summary}</p>
-        </div>
-        <div className={styles.mainbox}>
-          <b>{genres && `genres`}</b>
-          {movie.hasOwnProperty("genres") ? (
-            <ul>
-              {genres.map((g) => (
-                <li key={g}>{g}</li>
-              ))}
-            </ul>
-          ) : null}
-          <div className={styles.mainbox}>
+      <img src={coverImg} alt={title} />
+        <div className={styles.info}>
+          <h1>
+            <Link to={`/movie/${id}`}>{title}</Link>
+          </h1>
+            <p>{rating && `rating: ${rating}`}</p>
+            <p>{runtime && `runtime: ${runtime} (min)`}</p>
+            <p>{language && `language: ${language}`}</p>
             <p>{mpa_rating && `mpa rating: ${mpa_rating}`}</p>
-          </div>
-          <div>
-            <b>{description_full && `description`}</b>
-            <p>{description_full}</p>
-          </div>
-        </div>
-
-      <div>
-        <button className={styles.ytlink}>
-          <a href={`https://www.youtube.com/watch?v=${yt}`}>
-          
-            watch movie trailer
-          </a>
-        </button>
-
-        <Link to={"/"}>
-          <button className={styles.backbtn}>
-            <RiArrowGoBackFill className={styles.backbtnicon} />
-            BACK
+            <p><b> genres : </b>
+            {movie.hasOwnProperty("genres") ? (
+              <ul>
+                {genres.map((g) => (
+                  <li key={g}>{g}</li>
+                  ))}
+              </ul>
+            ) : null} </p>
+              <p><b>synopsis : </b>{description_full}</p>
+          <button className={styles.ytlink}>
+            <a href={`https://www.youtube.com/watch?v=${yt}`}>  
+                watch movie trailer
+            </a>
           </button>
-        </Link>
-        </div>
-
-      </div>
-    </div>
+          <Link to={"/"}>
+            <button className={styles.backbtn}>
+              <RiArrowGoBackFill className={styles.backbtnicon} />
+              BACK
+            </button>
+            </Link>
+          </div>
+       </div>
+    
   );
 }
 

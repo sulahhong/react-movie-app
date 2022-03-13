@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import { useGlobalContext } from "../components/context";
 import styles from './Home.module.css';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+
 
 
 function Home() {
@@ -34,31 +35,28 @@ function Home() {
              <input
                 value={rating}
                 id="rating"
-                placeholder="Rating"
+                placeholder="select Rating here"
                 type="number"
                 onChange={onChange}
-            />
-            <div>
+              />
+            
               <input 
                 type="text"
                 value={genre}
                 id='genre'
                 placeholder="set genres here"
                 onChange={(e) => setGenre(e.target.value)}
-                 />
-            </div>
-            <div>
+               />
+            
+            
               <input 
                 type="text"
                 value={query}
                 id='query'
                 placeholder="search here"
                 onChange={(e) => setQuery(e.target.value)}
-                
               />
-            </div>
-            <button type="submit" onClick={handleSubmit}><FaSearch /></button>
-            
+            <p type="submit" onClick={handleSubmit}><FaSearch /></p>
             </div> 
 
            
@@ -83,10 +81,9 @@ function Home() {
                 </div>
               </section>
           <div className="footerBtn">
-            <button onClick={prevPage}>prev</button>
-            <p>{page} of 
-            {totalPage}</p>
-            <button onClick={nextPage}>next</button>
+            <p onClick={prevPage}><FaArrowLeft /></p>
+            <p><b>{page}</b>  of  <b>{totalPage}</b></p>
+            <p onClick={nextPage}><FaArrowRight /></p>
           </div>
             </div>
             )}

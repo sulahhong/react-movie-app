@@ -34,7 +34,7 @@ function Detail() {
               <Moviedetail
                 key={movie.id}
                 id={movie.id}
-                coverImg={movie.medium_cover_image}
+                coverImg={movie.large_cover_image}
                 rating={movie.rating}
                 runtime={movie.runtime}
                 summary={movie.summary}

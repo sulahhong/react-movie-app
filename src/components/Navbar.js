@@ -16,7 +16,6 @@ const Navbar = () => {
                 <a href="/"> Home box</a>
             </div>
             <ul className='navbar-menu'>                
-                <li><a href="#"><GoSearch /></a></li>
                 <li><a href="#">about</a></li>
                 <li><a href="#">My list</a></li>
                 <li><a href="#">FAQ</a></li>

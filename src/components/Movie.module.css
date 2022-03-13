@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+
 *,
 ::after,
 ::before {
@@ -6,9 +10,8 @@
   box-sizing: border-box;
   background-color: #263343;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Raleway', arial;
 }
-
 
 
 .title {
@@ -19,8 +22,21 @@
 
 .bbox {
     width: 250px;
-    height: 615px;
+    height: 530px;
     padding: 0px 8px;
     font-size: small;
   
+}
+
+.homeinfo {
+  padding: 5px;
+}
+
+.homeinfo p {
+  padding: 2px;
+}
+
+.homeinfo li {
+  list-style-type: none;
+  padding: 2px;
 }

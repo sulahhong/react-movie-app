@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+
+
 *,
 ::after,
 ::before {
@@ -5,7 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #263343;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Raleway', arial;
 }
 
 body {
@@ -118,12 +123,22 @@ a {
     margin: 10px 10px;
     flex-wrap: wrap;
   }
-.search-bar {
-    padding: 150px 50px 50px 100px;
 
+
+.search-bar {
+    padding: 140px ;
     color: white;
-      
-    
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar p {
+    padding: 0px 20px;
+    font-size: 1.4rem;
+}
+
+.search-bar h2 {
+    padding: 0px 10px;
 }
 
 .footerBtn {
@@ -132,4 +147,10 @@ a {
     text-align: center;
     padding: 0px 0px;
     margin: 30px 10px ;
+    
+}
+
+.footerBtn p {
+    padding: 10px 20px;
+    font-size: 1.5rem;
 }

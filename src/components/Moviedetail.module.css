@@ -25,9 +25,6 @@
     margin: 10px 20px;
 }
 
-.maindetail {
-    margin: 0px;
-}
 
 
 .backbtn:hover {
@@ -61,7 +58,7 @@
     font-family: 'Raleway', sans-serif;
     border-radius: 10px;
     font-size: 1.2rem;
-    margin: 0px 10px;
+    margin: 30px 18px;
 }
 
 .ytlink a {
@@ -71,3 +68,23 @@
 .ytlink:hover {
     background-color: blue;
 }
+
+.info {
+    padding: 0px 25px;
+    font-size: 1.1rem;
+}
+
+.info p {
+    padding: 10px;
+    margin: 3px;
+    
+}
+
+.info h1 {
+    padding: 0px 10px 0px 0px;
+}
+
+.info ul {
+    list-style-type: none;
+}
+
