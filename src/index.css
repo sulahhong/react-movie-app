@@ -125,20 +125,35 @@ a {
   }
 
 
-.search-bar {
+.searchbox {
     padding: 140px ;
     color: white;
     display: flex;
     justify-content: center;
 }
 
-.search-bar p {
-    padding: 0px 20px;
-    font-size: 1.4rem;
+.searchbox input, select, option {
+    height: 100%;
+    /* width: 100%; */
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    margin: 0px 5px;
+    font-size: 1.2rem;
 }
 
-.search-bar h2 {
-    padding: 0px 10px;
+.searchbox h2 {
+    padding: 10px 20px;
+}
+
+
+
+.searchbox p {
+    padding: 10px 20px;
+    font-size: 1.6rem;
 }
 
 .footerBtn {

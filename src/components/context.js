@@ -11,6 +11,11 @@ const AppProvider = ({ children }) => {
     const [totalPage, setTotalPage] = useState();
     const [query, setQuery] = useState('');
     const [genre, setGenre] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [searchForm, setSearchForm] = useState({
+      rating: 7,
+      genre: 'ALL'
+    })
     
     const url = `https://yts.mx/api/v2/list_movies.json?minimum_rating=${rating}&sort_by=year&page=${page}&query_term=${query}&genre=${genre}`
 
@@ -62,6 +67,14 @@ const AppProvider = ({ children }) => {
     })
   }
 
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
 
     useEffect(() => {
         getMovies();
@@ -83,7 +96,12 @@ return (
           setQuery,
           genre,
           setGenre,
-          handleSubmit }}>
+          handleSubmit,
+          isModalOpen,
+          openModal,
+          closeModal,
+          searchForm,
+          setSearchForm }}>
        {children}
    </AppContext.Provider>
 )

@@ -30,25 +30,48 @@ function Home() {
           <h1>Loading...</h1>
        ) : (
             <div>
-             <div className="search-bar"> 
-             <h2>search here</h2> 
-             <input
+             <div className="searchbox"> 
+             <h2>search here :</h2> 
+             <select
                 value={rating}
                 id="rating"
-                placeholder="select Rating here"
-                type="number"
-                onChange={onChange}
-              />
-            
-              <input 
-                type="text"
+                onChange={onChange}>
+                  <option value="9">9</option>
+                  <option value="8">8</option>
+                  <option value="7">7</option>
+                  <option value="6">6</option>
+                  <option value="5">5</option>
+                  <option value="4">4</option>
+                  <option value="3">3</option>
+                  <option value="2">2</option>
+                  <option value="1">1</option>
+             </select>
+
+              <select
                 value={genre}
                 id='genre'
-                placeholder="set genres here"
                 onChange={(e) => setGenre(e.target.value)}
-               />
+               >
+                 <option value="ALL">ALL</option>
+                 <option value="Fantasy">Fantasy</option>
+                 <option value="Sci-Fi">Sci-Fi</option>
+                 <option value="Crime">Crime</option>
+                 <option value="Action">Action</option>
+                 <option value="Documentary">Documentary</option>
+                 <option value="Comedy">Comedy</option>
+                 <option value="Horror">Horror</option>
+                 <option value="Thriller">Thriller</option>
+                 <option value="Drama">Drama</option>
+                 <option value="Mystery">Mystery</option>
+                 <option value="History">History</option>
+                 <option value="Romance">Romance</option>
+                 <option value="Musical">Musical</option>
+                 <option value="Music">Music</option>
+                 <option value="Family">Family</option>
+
+              </select>
             
-            
+              
               <input 
                 type="text"
                 value={query}
