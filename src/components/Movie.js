@@ -1,10 +1,13 @@
 
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "./context";
 import styles from './Movie.module.css';
 
 function Movie({ id, coverImg, rating, runtime, description_full, title, summary, genres, movie}) {
   return (
+
+    
       <div className={styles.bbox}>
         <img src={coverImg} alt={title} />
         <div className={styles.homeinfo}>
