@@ -114,7 +114,7 @@ a {
     flex-wrap: wrap;
     }
   
-  .box {
+.box {
     display: flex;
     justify-content: space-between;
     align-items: center;

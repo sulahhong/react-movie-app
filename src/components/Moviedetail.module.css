@@ -25,7 +25,9 @@
     margin: 10px 20px;
 }
 
-
+.detailimg {
+    width: 300px;
+}
 
 .backbtn:hover {
     background-color: blue;
@@ -86,5 +88,31 @@
 
 .info ul {
     list-style-type: none;
+}
+
+.modalbg {
+    /* display: flex;
+    justify-content: center; */
+    display:block;
+    position: fixed;
+    background: rgba(255, 0, 0, 1);
+    z-index: 998;
+    
+}
+
+.open {
+   
+     display: block; 
+    position: fixed; 
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    height: 50%;
+    width: 50ch;
+    transform:translate(-50%,-50%);
+    overflow: auto;
+    background: black;
+    background-color: black;
+    
 }
 
