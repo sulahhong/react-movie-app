@@ -34,54 +34,59 @@ function Moviedetail({
   //   return language;
   // }
 
-  switch(language) {
-    case 'ko' : language = 'Korean';
-    break;
-    case 'en' : language = 'English';
-    break;
+  switch (language) {
+    case 'ko': language = 'Korean';
+      break;
+    case 'en': language = 'English';
+      break;
   }
-  
+
 
   return (
     <section>
-    <div className={styles.container}>
-      <img className={styles.detailimg} src={coverImg} alt={title} />
-      <div className={styles.info}>
-        <h1>
-          <Link to={`/movie/${id}`}>{title}</Link>
-        </h1>
-        <p>{rating && `rating: ${rating}`}</p>
-        <p>{runtime && `runtime: ${runtime} (min)`}</p>
-        <p>{language && `language: ${language}`}</p>
-        <p>{mpa_rating && `mpa rating: ${mpa_rating}`}</p>
-        <p>
-          <b> genres : </b>
-          {movie.hasOwnProperty("genres") ? (
-            <ul>
-              {genres.map((g) => (
-                <li key={g}>{g}</li>
-              ))}
-            </ul>
-          ) : null}{" "}
-        </p>
+      <div className={styles.container}>
+        <img className={styles.detailimg} src={coverImg} alt={title} />
+        <div className={styles.info}>
+          <h1>
+            <Link to={`/movie/${id}`}>{title}</Link>
+          </h1>
+          {/* <p>{rating && `rating: ${rating}`}</p> */}
+          <p><b>rating : </b>{rating}</p>
+          <p><b>runtime :</b> {runtime} min</p>
+          <p><b>language :</b> {language}</p>
+          <p><b>mpa rating :</b> {mpa_rating}</p>
+          <p>
+            
+            <b> genres : </b>
+            {movie.hasOwnProperty("genres") ? (
+              <ul>
+                {genres.map((g) => (
+                  <li key={g}>{g}</li>
+                ))}
+              </ul>
+            ) : null}{" "}
+          </p>
+          <p><b>synopsis : </b>
+            {description_full}
+          </p>
 
-        <button onClick={openModal}>modal</button>
-        <button className={styles.ytlink}>
-          <a href={`https://www.youtube.com/watch?v=${yt}`}>
-            watch movie trailer
-          </a>
-        </button>
-        <Link to={"/"}>
-          <button className={styles.backbtn}>
-            <RiArrowGoBackFill className={styles.backbtnicon} />
-            BACK
+          {/* <button onClick={openModal}>modal</button> */}
+          <button className={styles.ytlink}>
+            <a href={`https://www.youtube.com/watch?v=${yt}`}>
+              watch movie trailer
+            </a>
           </button>
-        </Link>
+          <Link to={"/"}>
+            <button className={styles.backbtn}>
+              <RiArrowGoBackFill className={styles.backbtnicon} />
+              BACK
+            </button>
+          </Link>
+        </div>
+
       </div>
-      
-    </div>
-    
-    {modal ? (
+
+      {/* {modal ? (
       <p className={modal ? `${styles.open} ${styles.modalbg}`  : styles.close}>
         <b>synopsis : </b>
         {description_full}
@@ -89,12 +94,12 @@ function Moviedetail({
           X
         </button>
       </p>
-      ) : null}
-    
+      ) : null} */}
+
     </section>
   );
 }
-          // <div className={styles.modalcontainer}>
+// <div className={styles.modalcontainer}>
 
 Moviedetail.propTypes = {
   id: PropTypes.number.isRequired,
