@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
-    
     const [movies, setMovies] = useState([]);
     const [rating, setRating] = useState(1);
     const [page, setPage] = useState(1);
@@ -17,17 +17,15 @@ const AppProvider = ({ children }) => {
       genre: 'ALL'
     })
     
-    const url = `https://yts.mx/api/v2/list_movies.json?minimum_rating=${rating}&sort_by=year&page=${page}&query_term=${query}&genre=${genre}`
-
+    const url1 = `https://yts.mx/api/v2/list_movies.json?minimum_rating=${rating}&sort_by=year&page=${page}&query_term=${query}&genre=${genre}`
     
 
     const onChange = (event) => { setRating(event.target.value)};
     const getMovies = async () => {
-        const json = await ( await fetch (url)).json();
+        const json = await ( await fetch (url1)).json();
         setMovies(json.data.movies);
         setLoading(false);
 
-        console.log(json)
         
     let movieCount = json.data.movie_count
     let x = Math.ceil(movieCount / json.data.limit)
@@ -101,7 +99,9 @@ return (
           openModal,
           closeModal,
           searchForm,
-          setSearchForm }}>
+          setSearchForm,
+          
+          }}>
        {children}
    </AppContext.Provider>
 )

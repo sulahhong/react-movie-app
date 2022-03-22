@@ -30,7 +30,7 @@ function Movie({
           </Link>
         </h2>
         <p>{rating && `rating: ${rating}`}</p>
-        <p>{runtime && `runtime: ${runtime} (min)`}</p>
+        <p>{runtime && `runtime: ${runtime} min`}</p>
         {/* <p>
           <b>{genres && `genres`}</b>
         </p> */}

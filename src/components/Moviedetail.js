@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Moviedetail.module.css";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { useState } from "react";
+import Suggestions from "./Suggestions";
 
 function Moviedetail({
   id,
@@ -83,7 +84,9 @@ function Moviedetail({
             </button>
           </Link>
         </div>
-
+        <div>
+          <Suggestions />
+        </div>
       </div>
 
       {/* {modal ? (

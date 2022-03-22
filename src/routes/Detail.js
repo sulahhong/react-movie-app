@@ -8,6 +8,8 @@ function Detail() {
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
     const [movie, setMovie] = useState([]);
+    const [suggstions, setSuggestions] = useState([]);
+
     const goHome = () => getMovie();
     const getMovie = async () => {
     const json = await (
@@ -16,12 +18,21 @@ function Detail() {
      setMovie(json.data.movie);
     }
 
+    const getSuggestions = async () => {
+      const json = await ( await fetch (`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${id}`)).json();
+      setSuggestions(json.data.movies);
+    }
+
+ 
+
+
+
     useEffect(() => {
        getMovie();
        setLoading(false);
     }, []);
 
-    console.log(movie)
+    
 
     return (
       <div>
