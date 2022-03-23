@@ -8,28 +8,31 @@ function Detail() {
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
     const [movie, setMovie] = useState([]);
-    const [suggstions, setSuggestions] = useState([]);
+    const [suggestions, setSuggestions] = useState([]);
 
     const goHome = () => getMovie();
+
     const getMovie = async () => {
     const json = await (
-       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-    ).json();
+       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)).json();
+    console.log(json)
      setMovie(json.data.movie);
+
     }
 
     const getSuggestions = async () => {
-      const json = await ( await fetch (`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${id}`)).json();
-      setSuggestions(json.data.movies);
+      const json2 = await ( await fetch (`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${id}`)).json();
+      console.log(json2)
+      setSuggestions(json2.data.movies);
+     console.log(suggestions[0])
     }
 
  
 
-
-
     useEffect(() => {
        getMovie();
        setLoading(false);
+       getSuggestions();
     }, []);
 
     
@@ -55,7 +58,9 @@ function Detail() {
                 description_full={movie.description_full}
                 language={movie.language}
                 mpa_rating={movie.mpa_rating} 
-                yt={movie.yt_trailer_code}/>
+                yt={movie.yt_trailer_code}
+                suggestions={suggestions}
+                />
               }
             
           </div>

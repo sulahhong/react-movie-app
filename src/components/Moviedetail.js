@@ -17,9 +17,14 @@ function Moviedetail({
   language,
   yt,
   mpa_rating,
-  movie,
+  movie, suggestions,
 }) {
   const [modal, setModal] = useState(false);
+
+  console.log(suggestions)
+  console.log(suggestions[0])
+  console.log(suggestions[1])
+
 
   const openModal = () => {
     setModal(true);
