@@ -10,13 +10,15 @@ function Detail() {
     const [movie, setMovie] = useState([]);
     const [suggestions, setSuggestions] = useState([]);
 
+
     const goHome = () => getMovie();
 
     const getMovie = async () => {
     const json = await (
-       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)).json();
+       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}&with_images=true&with_cast=true`)).json();
     console.log(json)
      setMovie(json.data.movie);
+  
 
     }
 
@@ -25,8 +27,11 @@ function Detail() {
       console.log(json2)
       setSuggestions(json2.data.movies);
      console.log(suggestions[0])
-    }
 
+
+     
+    }
+// https://yts.mx/api/v2/movie_details.json?movie_id=15&with_images=true&with_cast=true
  
 
     useEffect(() => {
@@ -55,6 +60,7 @@ function Detail() {
                 title={movie.title}
                 genres={movie.genres}
                 movie={movie}
+                cast={movie.cast}
                 description_full={movie.description_full}
                 language={movie.language}
                 mpa_rating={movie.mpa_rating} 

@@ -28,7 +28,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 1310px;
     background-color:  #263343;
@@ -126,7 +126,7 @@ a {
 
 
 .searchbox {
-    padding: 140px ;
+    padding: 50px ;
     color: white;
     display: flex;
     justify-content: center;

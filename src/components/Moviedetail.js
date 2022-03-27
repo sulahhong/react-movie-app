@@ -17,15 +17,12 @@ function Moviedetail({
   language,
   yt,
   mpa_rating,
-  movie, suggestions,
+  movie, suggestions, cast,
 }) {
   const [modal, setModal] = useState(false);
 
-  console.log(suggestions)
-  console.log(suggestions[0])
-  console.log(suggestions[1])
-
-
+  
+ 
   const openModal = () => {
     setModal(true);
   };
@@ -51,18 +48,28 @@ function Moviedetail({
   return (
     <section>
       <div className={styles.container}>
-        <img className={styles.detailimg} src={coverImg} alt={title} />
+        <div>
+          <img className={styles.detailimg} src={coverImg} alt={title} />
+        </div>
         <div className={styles.info}>
           <h1>
             <Link to={`/movie/${id}`}>{title}</Link>
           </h1>
           {/* <p>{rating && `rating: ${rating}`}</p> */}
-          <p><b>rating : </b>{rating}</p>
-          <p><b>runtime :</b> {runtime} min</p>
-          <p><b>language :</b> {language}</p>
-          <p><b>mpa rating :</b> {mpa_rating}</p>
           <p>
-            
+            <b>rating : </b>
+            {rating}
+          </p>
+          <p>
+            <b>runtime :</b> {runtime} min
+          </p>
+          <p>
+            <b>language :</b> {language}
+          </p>
+          <p>
+            <b>mpa rating :</b> {mpa_rating}
+          </p>
+          <p>
             <b> genres : </b>
             {movie.hasOwnProperty("genres") ? (
               <ul>
@@ -72,7 +79,14 @@ function Moviedetail({
               </ul>
             ) : null}{" "}
           </p>
-          <p><b>synopsis : </b>
+          
+           {movie.hasOwnProperty("cast") ? ( 
+             cast.map((actor)=>(<div>{actor.name}</div>))
+            ) : null}
+            
+          <p>
+          
+            <b>synopsis : </b>
             {description_full}
           </p>
 
@@ -88,9 +102,21 @@ function Moviedetail({
               BACK
             </button>
           </Link>
-        </div>
-        <div>
-          <Suggestions />
+          <p>
+            <b>suggestions : </b>
+          </p>
+          <div className={styles.suggestion_container}>
+            {suggestions.map((suggestion) => (
+              <div className={styles.suggestion_one}>
+                <a href={`/movie/${suggestion.id}`}>
+                  <img
+                    src={suggestion.medium_cover_image}
+                    alt={suggestion.title}
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -103,7 +129,6 @@ function Moviedetail({
         </button>
       </p>
       ) : null} */}
-
     </section>
   );
 }

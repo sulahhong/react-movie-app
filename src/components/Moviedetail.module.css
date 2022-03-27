@@ -15,7 +15,7 @@
 }
 
 .container {
-    margin: 150px 20px;
+    margin: 50px 20px;
     display: flex;
 }
 
@@ -26,7 +26,8 @@
 }
 
 .detailimg {
-    width: 300px;
+    width: 380px;
+ 
 }
 
 .backbtn:hover {
@@ -109,7 +110,7 @@
 
 .open {
    
-     display: block; 
+    display: block; 
     position: fixed; 
     z-index: 999;
     left: 50%;
@@ -121,5 +122,17 @@
     background: black;
     background-color: black;
     
+}
+
+.suggestion_container {
+    display: flex;
+
+}
+
+.suggestion_one img {
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+  
 }
 
