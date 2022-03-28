@@ -21,8 +21,8 @@ function Moviedetail({
 }) {
   const [modal, setModal] = useState(false);
 
-  
- 
+
+
   const openModal = () => {
     setModal(true);
   };
@@ -80,12 +80,12 @@ function Moviedetail({
             ) : null}{" "}
           </p>
           <p><b>cast : </b>
-           {movie.hasOwnProperty("cast") ? ( 
-             cast.map((actor)=>(<div className={styles.actor}><img className={styles.actorimg} src={actor.url_small_image} alt={actor} /> <p><b>{actor.name} </b> as "{actor.character_name}"</p></div>))
+            {movie.hasOwnProperty("cast") ? (
+              cast.map((actor) => (<div  className={styles.actorcontainer}><a href={`https://www.imdb.com/name/nm${actor.imdb_code}`}><img className={styles.actorimg} src={actor.url_small_image} alt={actor} /></a><p><b>{actor.name} </b> as "{actor.character_name}"</p></div>))
             ) : null}
           </p>
           <p>
-          
+
             <b>synopsis : </b>
             {description_full}
           </p>

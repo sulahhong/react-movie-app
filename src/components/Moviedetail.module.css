@@ -141,10 +141,10 @@
     padding: 8px;
 }
 
-.actor {
+.actorcontainer {
     display: flex;
 }
 
-.actor p {
-    padding: 22px;
+.actorcontainer p {
+    padding-top: 22px;
 }
