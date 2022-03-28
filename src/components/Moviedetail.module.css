@@ -136,3 +136,15 @@
   
 }
 
+.actorimg {
+    border-radius: 40px;
+    padding: 8px;
+}
+
+.actor {
+    display: flex;
+}
+
+.actor p {
+    padding: 22px;
+}

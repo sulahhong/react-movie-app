@@ -79,11 +79,11 @@ function Moviedetail({
               </ul>
             ) : null}{" "}
           </p>
-          
+          <p><b>cast : </b>
            {movie.hasOwnProperty("cast") ? ( 
-             cast.map((actor)=>(<div>{actor.name}</div>))
+             cast.map((actor)=>(<div className={styles.actor}><img className={styles.actorimg} src={actor.url_small_image} alt={actor} /> <p><b>{actor.name} </b> as "{actor.character_name}"</p></div>))
             ) : null}
-            
+          </p>
           <p>
           
             <b>synopsis : </b>
