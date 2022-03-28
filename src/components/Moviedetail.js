@@ -82,7 +82,7 @@ function Moviedetail({
           <p><b>cast : </b>
             {movie.hasOwnProperty("cast") ? (
               cast.map((actor) => (<div  className={styles.actorcontainer}><a href={`https://www.imdb.com/name/nm${actor.imdb_code}`}><img className={styles.actorimg} src={actor.url_small_image} alt={actor} /></a><p><b>{actor.name} </b> as "{actor.character_name}"</p></div>))
-            ) : null}
+            ) : "no cast info"}
           </p>
           <p>
 

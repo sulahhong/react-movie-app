@@ -13,6 +13,7 @@
   font-family: 'Raleway', arial;
 }
 
+
 body {
     max-width: 1310px;
     margin-left: auto;
@@ -22,6 +23,10 @@ body {
 a {
     text-decoration: none;
     color: white;
+}
+
+.loading {
+    text-align: center;
 }
 
 .navbar {

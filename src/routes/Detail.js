@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Moviedetail from "../components/Moviedetail";
 import Navbar from "../components/Navbar";
 // import Home from "../routes/Home";
+import { SpinningCircles } from 'react-loading-icons'
 
 function Detail() {
     const { id } = useParams();
@@ -46,9 +47,9 @@ function Detail() {
       <div>
        {
           loading
-          ? <h1>Loading...</h1>
+          ? (<h1 className="loading"><SpinningCircles /></h1>)
           :
-          <div>
+          (<div>
             { 
               <Moviedetail
                 key={movie.id}
@@ -69,7 +70,7 @@ function Detail() {
                 />
               }
             
-          </div>
+          </div>)
         } 
       </div>
     )

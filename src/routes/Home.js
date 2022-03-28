@@ -4,8 +4,8 @@ import Modal from "../components/Modal";
 import { useGlobalContext } from "../components/context";
 import styles from './Home.module.css';
 import { FaSearch, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-
-
+import LoadingIcons from 'react-loading-icons'
+import { SpinningCircles } from 'react-loading-icons'
 
 function Home() {
   const {
@@ -29,7 +29,7 @@ function Home() {
       {/* <Modal /> */}
         <div>
           {loading ? (
-              <h1>Loading...</h1>
+              <h1 className="loading"><SpinningCircles /></h1>
           ) : (
                 <div>
                 <div className="searchbox"> 

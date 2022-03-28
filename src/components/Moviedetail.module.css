@@ -75,6 +75,7 @@
 .info {
     padding: 0px 25px;
     font-size: 1.1rem;
+    /* display: flex; */
 }
 
 .info p {
