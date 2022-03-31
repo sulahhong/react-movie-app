@@ -86,10 +86,14 @@
 }
 
 .info h1 {
-    padding: 0px 10px ;
+    padding-bottom: 12px ;
+    font-size: 2rem;
 }
 
-
+.info2 {
+    display: flex;
+    
+}
 
 .info ul, li {
     list-style-type: none;

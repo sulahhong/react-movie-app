@@ -55,7 +55,9 @@ function Moviedetail({
           <h1>
             <Link to={`/movie/${id}`}>{title}</Link>
           </h1>
+          <hr />
           {/* <p>{rating && `rating: ${rating}`}</p> */}
+          <div className={styles.info2}>
           <p>
             <b>rating : </b>
             {rating}
@@ -69,6 +71,7 @@ function Moviedetail({
           <p>
             <b>mpa rating :</b> {mpa_rating}
           </p>
+          </div>
           <p>
             <b> genres : </b>
             {movie.hasOwnProperty("genres") ? (
@@ -79,6 +82,7 @@ function Moviedetail({
               </ul>
             ) : null}{" "}
           </p>
+          
           <p><b>cast : </b>
             {movie.hasOwnProperty("cast") ? (
               cast.map((actor) => (<div  className={styles.actorcontainer}><a href={`https://www.imdb.com/name/nm${actor.imdb_code}`}><img className={styles.actorimg} src={actor.url_small_image} alt={actor} /></a><p><b>{actor.name} </b> as "{actor.character_name}"</p></div>))
